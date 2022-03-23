@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<skel version="1.0">
+    <world name="world 1">
+        <physics>
+            <time_step>0.001</time_step>
+            <gravity>0 -9.81 0</gravity>
+            <collision_detector>fcl_mesh</collision_detector>
+        </physics>
+        <skeleton name="skeleton_1">
+            <body name="link 1">
+                <gravity>1</gravity>
+                <transformation>0 0 0 0 0 0</transformation>
+                <inertia>
+                    <mass>0.1</mass>
+                    <offset>0 0 0</offset>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>0.01 0.05 0.01</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+            </body>
+            <joint type="ball" name="joint 1">
+                <parent>world</parent>
+                <child>link 1</child>
+                <transformation>0 0.025 0 0 0 0</transformation>
+            </joint>
+        </skeleton>
+        <skeleton name="skeleton_2">
+            <body name="link 2">
+                <gravity>1</gravity>
+                <transformation>0 -0.05 0 0 0 0</transformation>
+                <inertia>
+                    <mass>0.1</mass>
+                    <offset>0 0 0</offset>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>0.01 0.05 0.01</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+            </body>
+            <joint type="ball" name="joint 2">
+                <parent>skeleton_1.link 1</parent>
+                <child>link 2</child>
+                <transformation>0 0.025 0 0 0 0</transformation>
+            </joint>
+        </skeleton>
+        <skeleton name="skeleton_3">
+            <body name="link 3">
+                <gravity>1</gravity>
+                <transformation>0 -0.1 0 0 0 0</transformation>
+                <inertia>
+                    <mass>0.1</mass>
+                    <offset>0 0 0</offset>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>0.01 0.05 0.01</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+            </body>
+            <joint type="ball" name="joint 3">
+                <parent>skeleton_2.link 2</parent>
+                <child>link 3</child>
+                <transformation>0 0.025 0 0 0 0</transformation>
+            </joint>
+        </skeleton>	
+    </world>
+</skel>

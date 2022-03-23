@@ -1,0 +1,26 @@
+다른 파이썬 파일의 함수 호출하는 방법
+
+###################### 파일 1. bybit_function.py
+
+def my_function1():
+	print("Hello Bybit")
+
+###################### 파일 2. main.py
+
+import bybit_function >> 파일의 확정자 py 없이 임포트
+bybit_function.my_function1() >> bybit_function.py의 함수 my_function1 호출
+
+###########################################
+
+import bybit_function as bf >> bf로 받앗음
+bf.my_function1() >> bybit_function.py의 함수 my_function1() 호출
+
+###########################################
+
+from bybit_function import my_function1
+my_function1() >> bybit_function.py의 함수 my_function1 호출
+
+###########################################
+
+from bybit_function import *
+my_function1() >> bybit_function.py의 함수 my_function1 호출

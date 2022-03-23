@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the task.json format
+    "version" : "2.0.0",
+    "options" : {
+        "cwd" : "${workspaceRoot}/build"
+    },
+    "tasks" :[
+        {
+            "label" : "cmake",
+            "type" : "shell",
+            "command" : "camke",
+            "args" : [".."],
+            "group" : "build"
+        },
+        {
+            "label" : "build",
+            "command" : "cmake",
+            "args" : ["-build","."],
+            "group" : {
+                "kind" : "build",
+                "isDefault" : true
+            }
+        }
+    ]
+}

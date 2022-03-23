@@ -1,0 +1,62 @@
+ls :
+	[기본] : 현재 디렉토리의 파일, 디렉토리를 표시
+	[a] : 숨김파일까지 모두 표시
+	[l] : 없음
+
+	ls
+	ls-a
+	ls-al
+
+pwd :
+	[기본] : 현재 경로 표시
+	
+	pwd
+
+clear :
+	[기본] : 터미널 창에 있는 내용을 모두 지운다.
+	
+	clear
+
+cd :
+	[기본] : 디렉토리로 이동한다
+		
+	cd hello
+
+touch :
+	[기본] : 파일을 생성한다. or 이미 있을 시에는 수정시간을 현재시간으로 변경
+
+	touch ./hi.txt
+
+rm :
+	[기본] : 파일 삭제
+	[r] : 내부 디렉토리 안의 모든 파일까지 삭제
+
+	rm ./hi.txt
+	rm -r ./hello
+
+mkdir :
+	[기본] : 디렉토리 생성
+	[-p] : 하위 디렉토리까지 생성
+
+	mkdir hello
+	mkdir ./hello/hi/bye
+
+rmdir : 
+	[기본] : 디렉토리 삭제, 안에 아무 것도 없을 때만 사용가능
+
+	rmdir ./hello
+
+mv :
+	[기본] : 이동
+	[기본] : 이름 변경
+
+	mv hi.txt/hello
+	mv hi.txt bye.txt
+
+cp :
+	[기본] : 파일을 경로로 복사
+	[r] : 디렉토리 복사
+
+	cp hi.txt ./hello
+	cp hello ./bye
+

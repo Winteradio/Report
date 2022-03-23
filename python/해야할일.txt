@@ -1,0 +1,47 @@
+2021년 12월 2일 개별 미팅
+	1. logarithm of matrix : Rotation 구현하기
+	2. SPD Control 구현하기
+		1. 간단한 박스 2개와 1개의 Joint로 구성된 물질 구현
+		2. 가만히 서있는 사람 구현
+		3. 가만히 서있는 사람에서 한부분만 움직이게 구현하기
+	3. BVH Rotation veloctiy는 현재 프레임과 전 프레임간의 차이를 timestep으로 나누어서 구한다
+		1. [R(t+dt)-R(t)]/dt 형식으로 구현
+	4. 최종적으로 구하는 것은 Torque이지만, 그냥 setForces에 넣어도 상관없다.
+	5. BVH의 Rotation과 Rotation Velocity 형식 : Z,X,Y
+		1. 순서를 바꿔서 Dart Rotation Properties들과 계산해야 한다
+		2. Dart Properties들의 구성은 어떻게 되어있는지 파악해야한다
+	6. 캐릭터의 방향이 BVH에서 제공하는 Frame이 방향과 동일해야하는지도 파악해야한다.
+
+2021년 1월 6일
+	1. 보경씨한테 물어볼 것
+		Kp와 Kd에 따라서 구현되는 움직임들이 많이 달라지는지
+		frequency에 따라서 구현되는 움직임들이 많이 달라지는지		
+			frequency-Update & Simulation 개념이 어떻게 되는지
+		전반적인 코드.... 모르겠다... 왜 손만 달면 안되는지 모르겠다	
+		부위들이 많아질수록 Kd와 Kp가 감소하는데 왜 감소하는지 모르겠음
+
+2021년 1월 7일 랩미팅
+	1.timer 안에 World.step()과 frame를 for문을 통해서 Simulation 실행할 수 있도록
+		timer는 시뮬레이션을 돌리는 시간이 아니라 rendering만 하는 것
+	2.PD Control은 Gain를 크게 줄 때 발산하는 경향을 많이 보인다
+		SPD Control을 통해서 더 큰 Gain를 줄 때 안정적인 움직임을 보인다
+
+	## 다음 랩미팅 준비할 것
+		timer, World.step(),frame 재설정
+		SPD Control 구현
+
+2021년 1월 14일 개별미팅
+	1.
+	2.
+	3.
+	4.
+	5.
+	6.
+	7.
+
+	교수님께 말씀드릴 것
+	1. 월요일 졸업설계 면담 12시부터 시작
+		그래서 10시 로봇 교육을 참여하다 11시 45분쯤 가도 되는지 여쭤보기
+	2. 민호 출근 관련하여 자리나 시간대 여쭤보기
+	3. 1차원 배열이 왜 다차원 배열보다 효율적으로 사용되는 것인지??
+

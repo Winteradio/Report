@@ -1,0 +1,4 @@
+#cmake--help-command-list
+#camke--help-variable-list
+#cmake--help-property-list
+cmake_minimun_required(VERSION 3.10)

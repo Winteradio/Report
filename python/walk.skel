@@ -1,0 +1,652 @@
+<?xml version="1.0" ?> 
+<skel version="1.0">
+    <world name="world 1">
+        <physics>
+            <time_step>0.0001</time_step>
+			<gravity>0 0 0</gravity>
+            <collision_detector>fcl_mesh</collision_detector>
+        </physics>
+        <skeleton name="skeleton 1">
+            <body name="heap">
+                <gravity>1</gravity>
+                <transformation>
+					0 0 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>5</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+						<ixx>0.00833</ixx>
+						<iyy>0.00833</iyy>
+						<izz>0.00833</izz>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyz>0</iyz>
+					</moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.1 0.1 0.1
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+					<geometry>
+                        <box>
+                            <size>
+								0.1 0.1 0.1
+							</size>
+                        </box>
+                    </geometry>
+				</collision_shape>
+            </body>
+            <body name="chest">
+                <gravity>1</gravity>
+                <transformation>
+					0 0.1 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>4</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00666</ixx>
+                        <iyy>0.00666</iyy>
+                        <izz>0.00666</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.1 0.1 0.1
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+					<geometry>
+                        <box>
+                            <size>
+								0.1 0.1 0.1
+							</size>
+                        </box>
+                    </geometry>
+				</collision_shape>
+            </body>
+			<body name="face">
+                <gravity>1</gravity>
+                <transformation>
+					0 0.2 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>3</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00125</ixx>
+                        <iyy>0.00125</iyy>
+                        <izz>0.00125</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+					<geometry>
+                        <box>
+                            <size>
+								0.05 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+				</collision_shape>
+            </body>
+			<body name="left_arm1">
+                <gravity>1</gravity>
+				<transformation>
+					0.1 0.1 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>2</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00083</ixx>
+                        <iyy>0.00208</iyy>
+                        <izz>0.00208</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.1 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+					<geometry>
+                        <box>
+                            <size>
+								0.1 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+				</collision_shape>
+            </body>
+			<body name="left_arm2">
+                <gravity>1</gravity>
+                <transformation>
+					0.2 0.1 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>0.7</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00029</ixx>
+                        <iyy>0.00073</iyy>
+                        <izz>0.00073</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.1 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+					<geometry>
+                        <box>
+                            <size>
+								0.1 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+				</collision_shape>
+            </body>
+			<body name="left_hand">
+                <gravity>1</gravity>
+                <transformation>
+					0.275 0.1 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>0.3</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00005</ixx>
+                        <iyy>0.00009</iyy>
+                        <izz>0.00009</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.03 0.03
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+					<geometry>
+                        <box>
+                            <size>
+								0.05 0.03 0.03
+							</size>
+                        </box>
+                    </geometry>
+				</collision_shape>
+            </body>
+			<body name="right_arm1">
+                <gravity>1</gravity>
+                <transformation>
+					-0.1 0.1 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>2</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00083</ixx>
+                        <iyy>0.00208</iyy>
+                        <izz>0.00208</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.1 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.1 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+			<body name="right_arm2">
+                <gravity>1</gravity>
+                <transformation>
+					-0.2 0.1 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>0.7</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00029</ixx>
+                        <iyy>0.00073</iyy>
+                        <izz>0.00073</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.1 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.01 0.05 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+			<body name="right_hand">
+                <gravity>1</gravity>
+                <transformation>
+					-0.275 0.1 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>0.3</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00005</ixx>
+                        <iyy>0.00009</iyy>
+                        <izz>0.00009</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.03 0.03
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.03 0.03
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+			<body name="left_leg1">
+                <gravity>1</gravity>
+                <transformation>
+					0.04 -0.125 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>7</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.01458</ixx>
+                        <iyy>0.00292</iyy>
+                        <izz>0.01458</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.15 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.15 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+			<body name="left_leg2">
+                <gravity>1</gravity>
+                <transformation>
+					0.04 -0.26 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>2</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00281</ixx>
+                        <iyy>0.00083</iyy>
+                        <izz>0.00281</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.12 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.12 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+			<body name="left_foot">
+			<gravity>1</gravity>
+                <transformation>
+					0.04 -0.36 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>0.6</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00063</ixx>
+                        <iyy>0.00063</iyy>
+                        <izz>0.00025</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.05 0.1
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.05 0.1
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+			<body name="right_leg1">
+                <gravity>1</gravity>
+                <transformation>
+					-0.04 -0.125 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>7</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.01458</ixx>
+                        <iyy>0.00292</iyy>
+                        <izz>0.01458</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.15 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.15 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+			<body name="right_leg2">
+                <gravity>1</gravity>
+                <transformation>
+					-0.04 -0.26 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>2</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00281</ixx>
+                        <iyy>0.00083</iyy>
+                        <izz>0.00281</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.12 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.12 0.05
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+            <body name="right_foot">
+            <gravity>1</gravity>
+                <transformation>
+					-0.04 -0.36 0 0 0 0
+				</transformation>
+                <inertia>
+                    <mass>0.6</mass>
+                    <offset>0 0 0</offset>
+					<moment_of_inertia>
+                        <ixx>0.00063</ixx>
+                        <iyy>0.00063</iyy>
+                        <izz>0.00025</izz>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyz>0</iyz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.05 0.1
+							</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+				<collision_shape>
+                    <geometry>
+                        <box>
+                            <size>
+								0.05 0.05 0.1
+							</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+			<joint type="free" name="Hips">
+				<parent>world</parent>
+				<child>heap</child>
+			</joint>
+            <joint type="ball" name="Spine">
+                <parent>heap</parent>
+                <child>chest</child>
+                <transformation>0 -0.05 0 0 0 0</transformation>
+			</joint>
+			<joint type="ball" name="Head">
+                <parent>chest</parent>
+                <child>face</child>
+                <transformation>0 -0.025 0 0 0 0</transformation>
+            </joint>
+			<joint type="ball" name="RightArm">
+                <parent>chest</parent>
+                <child>right_arm1</child>
+                <transformation>0.05 0 0 0 0 0</transformation>
+            </joint>
+            <joint type="ball" name="RightForeArm">
+                <parent>right_arm1</parent>
+                <child>right_arm2</child>
+                <transformation>0.05 0 0 0 0 0</transformation>
+            </joint>
+            <joint type="ball" name="RightHand">
+                <parent>right_arm2</parent>
+                <child>right_hand</child>
+                <transformation>0.025 0 0 0 0 0</transformation>
+            </joint>
+			<joint type="ball" name="LeftArm">
+                <parent>chest</parent>
+                <child>left_arm1</child>
+                <transformation>-0.05 0 0 0 0 0</transformation>
+            </joint>
+			<joint type="ball" name="LeftForeArm">
+                <parent>left_arm1</parent>
+                <child>left_arm2</child>
+                <transformation>-0.05 0 0 0 0 0</transformation>
+            </joint>
+			<joint type="ball" name="LeftHand">
+                <parent>left_arm2</parent>
+                <child>left_hand</child>
+                <transformation>-0.025 0 0 0 0 0</transformation>
+            </joint>
+			<joint type="ball" name="RightUpLeg">
+                <parent>heap</parent>
+                <child>right_leg1</child>
+                <transformation>0 0.075 0 0 0 0</transformation>
+            </joint>
+            <joint type="ball" name="RightLeg">
+                <parent>right_leg1</parent>
+                <child>right_leg2</child>
+                <transformation>0 0.06 0 0 0 0</transformation>
+            </joint>
+            <joint type="ball" name="RightFoot">
+                <parent>right_leg2</parent>
+                <child>right_foot</child>
+                <transformation>0 0.025 0 0 0 0</transformation>
+            </joint>
+			<joint type="ball" name="LeftUpLeg">
+				<parent>heap</parent>
+				<child>left_leg1</child>
+				<transformation>0 0.075 0 0 0 0</transformation>
+			</joint>
+			<joint type="ball" name="LeftLeg">
+                <parent>left_leg1</parent>
+                <child>left_leg2</child>
+                <transformation>0 0.06 0 0 0 0</transformation>
+            </joint>
+			<joint type="ball" name="LeftFoot">
+				<parent>left_leg2</parent>
+				<child>left_foot</child>
+				<transformation>0 0.025 0 0 0 0</transformation>
+			</joint>
+		</skeleton>
+		<skeleton name="ground skeleton">
+            <mobile>false</mobile>
+            <body name="ground">
+                <transformation>0 -0.5 0 0 0 0</transformation>
+                <visualization_shape>
+                    <transformation>0 0 0 0 0 0</transformation>
+                    <geometry>
+                        <box>
+                            <size>5.0 0.05 5.0</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+                <collision_shape>
+                    <transformation>0 0 0 0 0 0</transformation>
+                    <geometry>
+                        <box>
+                            <size>10.0 0.05 10.0</size>
+                        </box>
+                    </geometry>
+                </collision_shape>
+            </body>
+            <joint type="free" name="joint 1">
+                <parent>world</parent>
+                <child>ground</child>
+            </joint>
+        </skeleton>
+    </world>
+</skel>

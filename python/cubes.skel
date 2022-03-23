@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<skel version="1.0">
+    <world name="world 1">
+        <physics>
+			<time_step>0.033333</time_step>
+            <gravity>0 0 0</gravity>
+            <collision_detector>fcl_mesh</collision_detector>
+		</physics>
+
+		<skeleton name="ground skeleton">
+            <body name="ground">
+                <transformation>0 -5.0 0 0 0 0</transformation>
+                <visualization_shape>
+                    <transformation>0 0 0 0 0 0</transformation>
+                    <geometry>
+                        <box>
+                            <size>2.5 0.05 2.5</size>
+                        </box>
+                    </geometry>
+                    <color>0.95 0.95 0.95</color>
+                </visualization_shape>
+                <collision_shape>
+                    <transformation>0 0 0 0 0 0</transformation>
+                    <geometry>
+                        <box>
+                            <size>2.5 0.05 2.5</size>
+                        </box>
+                    </geometry>
+                </collision_shape>                                
+            </body>
+            <joint type="weld" name="joint 1">
+                <parent>world</parent>
+                <child>ground</child>
+            </joint>
+        </skeleton>
+
+        <skeleton name="skeleton 1">
+            <body name="Cube_1">
+                <gravity>1</gravity>
+                <transformation>0 0 0 0 0 0</transformation>
+                <inertia>
+                    <mass>15</mass>
+                    <offset>0 0 0</offset>
+                    <moment_of_inertia>
+                        <ixx>0.3625</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>0.3625</iyy>
+                        <iyz>0</iyz>
+                        <izz>0.1</izz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>0.2 0.2 0.5</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+                <collision_shape>
+                    <transformation>0 0 0 0 0 0</transformation>
+                    <geometry>
+                        <box>
+                            <size>0.2 0.2 0.5</size>
+                        </box>
+                    </geometry>
+                </collision_shape>  
+            </body>
+
+            <body name="Cube_2">
+                <gravity>1</gravity>
+                <transformation>0 0.3 0 0 0 0</transformation>
+                <inertia>
+                    <mass>15</mass>
+                    <offset>0 0 0</offset>
+                    <moment_of_inertia>
+                        <ixx>0.5125</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>0.3625</iyy>
+                        <iyz>0</iyz>
+                        <izz>0.25</izz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>0.2 0.4 0.5</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+                <collision_shape>
+                    <transformation>0 0 0 0 0 0</transformation>
+                    <geometry>
+                        <box>
+                            <size>0.2 0.4 0.5</size>
+                        </box>
+                    </geometry>
+                </collision_shape>  
+            </body>
+
+            <body name="Cube_3">
+                <gravity>1</gravity>
+                <transformation>0 0.6 0 0 0 0</transformation>
+                <inertia>
+                    <mass>5</mass>
+                    <offset>0 0 0</offset>
+                    <moment_of_inertia>
+                        <ixx>0.0333</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>0.0333</iyy>
+                        <iyz>0</iyz>
+                        <izz>0.0333</izz>
+                    </moment_of_inertia>
+                </inertia>
+                <visualization_shape>
+                    <geometry>
+                        <box>
+                            <size>0.2 0.2 0.2</size>
+                        </box>
+                    </geometry>
+                </visualization_shape>
+                <collision_shape>
+                    <transformation>0 0 0 0 0 0</transformation>
+                    <geometry>
+                        <box>
+                            <size>0.2 0.2 0.2</size>
+                        </box>
+                    </geometry>
+                </collision_shape>  
+            </body>
+<!-- Joint Part -->
+
+        <!-- Cube -->
+			<joint type="free" name="None1"> <!-- Cube_1 -->
+                <parent>world</parent>
+                <child>Cube_1</child>
+                <transformation>0 0 0 0 0 0</transformation>
+            </joint>
+
+            <joint type="ball" name="Spine"> <!-- Cube_2 -->
+                <parent>Cube_1</parent>
+                <child>Cube_2</child>
+                <transformation>0 -0.2 0 0 0 0</transformation>
+                <init_pos>0 0 0</init_pos>
+                <init_vel>0 0 0</init_vel>
+            </joint>
+
+            <joint type="ball" name="Head"> <!-- Cube_3 -->
+                <parent>Cube_2</parent>
+                <child>Cube_3</child>
+                <transformation>0 -0.1 0 0 0 0</transformation>
+                <init_pos>0 0 0</init_pos>
+                <init_vel>0 0 0</init_vel>
+            </joint>
+        </skeleton>	
+    </world>
+</skel>

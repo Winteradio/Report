@@ -1,0 +1,61 @@
+#include <iostream>
+#include <unordered_map>
+#include <string>
+#include <vector>
+#include <cmath>
+#include <list>
+
+using namespace std;
+
+float *getCell(float position[],float Grid_Cell_Size)
+{
+	float result[3] = {position[0]/Grid_Cell_Size,position[1]/Grid_Cell_Size,position[2]/Grid_Cell_Size};
+	return result;
+}
+
+float getKey(float result[],int Grid_Cell_Count)
+{
+	int P1 = 73856093;
+	int P2 = 19349663;
+	int P3 = 83492791;
+
+	return (int)(pow(pow(result[0]*P1,result[1]*P2),result[2]*P3)) % Grid_Cell_Count;
+}
+
+int main()
+{
+	unordered_map<float,int> um;
+
+	int Particle_Num = 1000;
+	float Particle_Radius = 0.1f;
+	float Smoothing_Radius = 4*Particle_Radius;
+	float Bounding_Box_Width = 10.0f;
+	float Grid_Cell_Size = Smoothing_Radius;
+	int Grid_Cell_Count =pow(Bounding_Box_Width/Grid_Cell_Size,3);
+
+	float Particle_Inf[Particle_Num][3][3];
+
+	int range = (int)(Bounding_Box_Width/2.0f);
+	for (int i = 0 ; i < Particle_Num ; i++)
+	{
+		float PosX,PosY,PosZ;
+		PosX = i % range;
+		PosZ = (i / range) % range;
+		PosY = ( (i / range) / range ) % range;
+
+		Particle_Inf[i][0][0] = PosX * range;
+		Particle_Inf[i][0][1] = PosY * range;
+		Particle_Inf[i][0][2] = PosZ * range;
+	}
+
+	for (int i =0; i < Particle_Num ; i++)
+	{
+		float dis_Pos[3] = {Particle_Inf[i][0][0],Particle_Inf[i][0][1],Particle_Inf[i][0][2]};
+		float *Cell = getCell(dis_Pos,Grid_Cell_Size);
+		float Key = getKey(Cell,Grid_Cell_Count);
+		um.insert({Key,i});
+	}
+	cout << um.size() << endl;
+	return 0;
+}
+
